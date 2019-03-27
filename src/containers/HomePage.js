@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import FaceDetect from '../components/faceDetect';
+import FaceDetect from './faceDetect';
 import Rank from '../components/Rank';
 import SignOut from '../components/SignOut';
 import Logo from '../components/Logo';
@@ -8,7 +8,11 @@ class HomePage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-
+			user: {
+				username: '',
+				email: '',
+				detections: ''
+			}
 		}
 	}
 	render() {

@@ -13,12 +13,16 @@ class App extends Component {
     }
   }
 
+  onRouteChange = (newRoute) => {
+    this.setState({route:newRoute});
+  }
+
   render() {
     const {route} = this.state;
     switch(route) {
       case 'signin':
         return (
-          <SignIn/>
+          <SignIn onRouteChange={this.onRouteChange}/>
         );
       break;
       case 'home':
@@ -28,12 +32,12 @@ class App extends Component {
       break;
       case 'register':
         return (
-          <Register/>
+          <Register onRouteChange={this.onRouteChange}/>
         );
       break;
       default:
         return (
-          <SignIn/>
+          <SignIn onRouteChange={this.onRouteChange}/>
         );
     }    
   }
