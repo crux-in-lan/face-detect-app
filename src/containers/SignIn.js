@@ -17,9 +17,27 @@ class SignIn extends Component {
 		this.setState({password: event.target.value});
 	}
 
-	componentDidUpdate() {
-		console.log("email: ", this.state.email);
-		console.log("password: ", this.state.password);
+	// componentDidUpdate() {
+		// console.log("email: ", this.state.email);
+		// console.log("password: ", this.state.password);
+	// }
+
+	onSignInSubmit = (event) => {
+		fetch('http://192.168.0.108:3001/signin',{
+			method: 'post',
+			headers:{'Content-type':'application/json'},
+			body: JSON.stringify(this.state)
+		})
+		.then(response => response.json())
+		.then(result => {
+			if(result.data) {
+				this.props.updateUser(result.data);
+				this.props.onRouteChange('home');	
+			} else {
+				alert(result.err);
+			}		
+		})
+		.catch(err => {alert(err)});
 	}
 
 	render() {
@@ -35,7 +53,7 @@ class SignIn extends Component {
 					<input id='password' type='password' onChange={this.onPasswordChange}/>
 				</div>
 				<div>
-					<input type='button' value='Signin' onClick={() => onRouteChange('home')}/>
+					<input type='button' value='Signin' onClick={() => this.onSignInSubmit()}/>
 					<input type='button' value='Register' onClick={() => onRouteChange('register')}/>
 				</div>
 			</div>

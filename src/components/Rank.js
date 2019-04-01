@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Rank = (props) => {
+	// console.log(props);
 	return (
 		<div>
-			<h1>Nikola, you have made 11 detections</h1>
+			<h1>{`${props.username}, you have made ${props.detections} detections`}</h1>
 		</div>
 	)
 }

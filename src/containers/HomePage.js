@@ -6,22 +6,16 @@ import Logo from '../components/Logo';
 
 class HomePage extends Component {
 	constructor(props) {
-		super(props);
-		this.state = {
-			user: {
-				username: '',
-				email: '',
-				detections: ''
-			}
-		}
+		super(props)
 	}
+
 	render() {
 		return (
 	      <div className="grid-container">
 	            <div className="logo"><Logo/></div>
-	            <div className="rank"><Rank/></div>
-	            <div className="signout"><SignOut/></div>
-	            <div className="faceDetect"><FaceDetect/></div>
+	            <div className="rank"><Rank username={this.props.user.username} detections={this.props.user.detections}/></div>
+	            <div className="signout"><SignOut onRouteChange={this.props.onRouteChange}/></div>
+	            <div className="faceDetect"><FaceDetect updateUser={this.props.updateUser} detections={this.props.user.detections} userId={this.props.user.id}/></div>
 	      </div>
 	    );
 	}

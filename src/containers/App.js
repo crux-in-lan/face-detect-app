@@ -9,7 +9,12 @@ class App extends Component {
   constructor() {
     super();
     this.state ={
-      route: 'signin'
+      route: 'signin',
+      user: {     
+        username: '',
+        email: '',
+        detections: ''      
+      }
     }
   }
 
@@ -17,17 +22,25 @@ class App extends Component {
     this.setState({route:newRoute});
   }
 
+  updateUser = (userInfo) => {
+    this.setState({user:{...this.state.user,...userInfo}});
+  }
+
+  componentDidUpdate() {
+    console.log(this.state);
+  }
+
   render() {
     const {route} = this.state;
     switch(route) {
       case 'signin':
         return (
-          <SignIn onRouteChange={this.onRouteChange}/>
+          <SignIn onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>
         );
       break;
       case 'home':
         return (
-          <HomePage/>
+          <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
         );
       break;
       case 'register':

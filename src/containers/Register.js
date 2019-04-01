@@ -22,12 +22,28 @@ class Register extends Component {
 		this.setState({password: event.target.value});
 	}
 
-	componentDidUpdate() {
-		console.log("username: ", this.state.username);
-		console.log("email: ", this.state.email);
-		console.log("password: ", this.state.password);
+	// componentDidUpdate() {
+	// 	console.log("username: ", this.state.username);
+	// 	console.log("email: ", this.state.email);
+	// 	console.log("password: ", this.state.password);
+	// }
+	onRegisterSubmit = (event) => {
+		fetch('http://192.168.0.108:3001/register',{
+			method:'post',
+			headers: {'Content-type':'application/json'},
+			body: JSON.stringify(this.state)
+		})
+		.then(response => response.json())
+		.then(result => {
+			if(result.data) {
+				alert(result.data);
+				this.props.onRouteChange('home');
+			} else {
+				alert(result.err);				
+			}
+		})
+		.catch(err => alert(err));
 	}
-
 	render() {
 		const {onRouteChange} = this.props;
 		return (
@@ -45,7 +61,7 @@ class Register extends Component {
 					<input id='password' type='password' onChange={this.onPasswordChange}/>
 				</div>
 				<div>
-					<input type='button' value='Register' onClick={() => onRouteChange('home')}/>
+					<input type='button' value='Register' onClick={() => this.onRegisterSubmit()}/>
 				</div>
 			</div>
 		)

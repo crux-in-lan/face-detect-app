@@ -27,8 +27,22 @@ class FaceDetect extends Component {
 
 		app.models.predict("a403429f2ddf4b49b307e318f00e528b", this.state.imageUrl)
 		.then(result => {
-			console.log(result.outputs[0].data.regions[0].region_info.bounding_box);//_REM_
+			// console.log(result.outputs[0].data.regions[0].region_info.bounding_box);//_REM_
 			this.calculateBoundingBoxPositions(result.outputs[0].data.regions[0].region_info.bounding_box);
+			// console.log('Type of detections: ',this.props.detections);
+			fetch(`http://192.168.0.108:3001/detect/${this.props.userId}`,{
+				method:'put'
+			})
+			.then(response => response.json())
+			.then(result => {
+				if(result.data) {
+					this.props.updateUser({detections: result.data});
+				} else {
+					alert(result.err);
+				}
+			})
+			.catch(err => alert(err));
+			
 		})
 		.catch(err => alert(`Unable to get response from Clarifai. Error: ${err}`));
 	}
@@ -46,7 +60,7 @@ class FaceDetect extends Component {
 		this.setState({boundingBox: {top,right,bottom,left}},() => {
 			const bBox = document.getElementsByClassName("boundingBox")[0];
   			bBox.classList.add("active");
-			console.log(this.state.boundingBox);
+			// console.log(this.state.boundingBox);
 		});
 	}
 
