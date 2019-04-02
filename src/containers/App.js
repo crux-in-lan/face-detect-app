@@ -4,6 +4,7 @@ import './App.css';
 import HomePage from './HomePage';
 import SignIn from './SignIn';
 import Register from './Register';
+import Footer from '../components/footer';
 
 class App extends Component {
   constructor() {
@@ -35,22 +36,34 @@ class App extends Component {
     switch(route) {
       case 'signin':
         return (
-          <SignIn onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>
+          <div>
+            <SignIn onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>
+            <Footer/>
+          </div>
         );
       break;
       case 'home':
         return (
-          <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
+          <div>
+            <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
+            <Footer/>
+          </div>
         );
       break;
       case 'register':
         return (
-          <Register onRouteChange={this.onRouteChange}/>
+          <div>
+            <Register onRouteChange={this.onRouteChange}/>
+            <Footer/>
+          </div>
         );
       break;
       default:
         return (
-          <SignIn onRouteChange={this.onRouteChange}/>
+          <div>
+            <SignIn onRouteChange={this.onRouteChange}/>
+            <Footer/>
+          </div>
         );
     }    
   }
