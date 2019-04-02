@@ -1,5 +1,6 @@
 import React from 'react';
 import ToolTip from './ToolTip';
+import './footer.css';
 
 const Footer = (props) => {
 	return (
