@@ -1,0 +1,12 @@
+.logo {grid-area:logo;}
+.rank {grid-area:rank;}
+.signout {grid-area:signout;}
+.faceDetect {grid-area:faceDetect;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  "logo rank rank signout"
+  "faceDetect faceDetect faceDetect faceDetect";
+  grid-gap: 10px;
+}

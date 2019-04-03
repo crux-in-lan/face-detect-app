@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './css/Register.scss';
 
 class Register extends Component {
 	constructor(props) {
@@ -22,11 +23,6 @@ class Register extends Component {
 		this.setState({password: event.target.value});
 	}
 
-	// componentDidUpdate() {
-	// 	console.log("username: ", this.state.username);
-	// 	console.log("email: ", this.state.email);
-	// 	console.log("password: ", this.state.password);
-	// }
 	onRegisterSubmit = (event) => {
 		fetch('http://192.168.0.108:3001/register',{
 			method:'post',
@@ -44,24 +40,64 @@ class Register extends Component {
 		})
 		.catch(err => alert(err));
 	}
+
+	conponentDidMount() {
+
+	}
+
 	render() {
 		const {onRouteChange} = this.props;
-		return (
-			<div>
-				<div>
-					<label htmlFor='username'>Username:</label>
-					<input id='username' type='text' onChange={this.onUserNameChange}/>
-				</div>
-				<div>
-					<label htmlFor='email'>Email:</label>
-					<input id='email' type='text' onChange={this.onEmailChange}/>
-				</div>
-				<div>
-					<label htmlFor='password'>Password:</label>
-					<input id='password' type='password' onChange={this.onPasswordChange}/>
-				</div>
-				<div>
-					<input type='button' value='Register' onClick={() => this.onRegisterSubmit()}/>
+		return (			
+			<div className="register limiter">
+				<div className="container-login100">
+					<div className="wrap-login100">
+						<div className="login100-pic js-tilt">
+							<img alt="IMG" src={require('./images/img-01.png')}/>
+						</div>
+
+						<div className="login100-form">
+							<span className="login100-form-title">
+								Member Register
+							</span>
+
+							<div className="wrap-input100">
+								<input className="input100" type="text" name="username" placeholder="Username" onChange={this.onUserNameChange}/>
+								<span className="focus-input100"></span>
+								<span className="symbol-input100">
+									<i className="fa fa-user-circle-o" aria-hidden="true"></i>
+								</span>
+							</div>
+
+							<div className="wrap-input100">
+								<input className="input100" type="text" name="email" placeholder="Email" onChange={this.onEmailChange}/>
+								<span className="focus-input100"></span>
+								<span className="symbol-input100">
+									<i className="fa fa-envelope" aria-hidden="true"></i>
+								</span>
+							</div>
+
+							<div className="wrap-input100">
+								<input className="input100" type="password" name="pass" placeholder="Password" onChange={this.onPasswordChange}/>
+								<span className="focus-input100"></span>
+								<span className="symbol-input100">
+									<i className="fa fa-lock" aria-hidden="true"></i>
+								</span>
+							</div>
+							
+							<div className="container-login100-form-btn">
+								<button className="login100-form-btn" onClick={() => this.onRegisterSubmit()}>
+									Register
+								</button>
+							</div>
+
+							<div className="text-center p-t-136">
+								<a className="txt2" onClick={() => onRouteChange('signin')}>
+									Sign in
+									<i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		)

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import './App.css';
+import './css/util.css';
 import HomePage from './HomePage';
 import SignIn from './SignIn';
 import Register from './Register';
