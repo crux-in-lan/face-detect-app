@@ -3,10 +3,12 @@ import './RegisterFrame.scss';
 
 const RegisterFrame = (props) => {
 	return (
-		<div className="registerframe wrap-login100">
-		{
-			props.children
-		}
+		<div className='registerframe'>
+			<div className="wrap-login100">
+			{
+				props.children
+			}
+			</div>
 		</div>
 	)
 }

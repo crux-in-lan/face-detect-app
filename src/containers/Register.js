@@ -48,55 +48,51 @@ class Register extends Component {
 	render() {
 		const {onRouteChange} = this.props;
 		return (			
-			<div className="register limiter">
-				<div className="container-login100">
-					<div className="wrap-login100">
-						<div className="login100-pic js-tilt">
-							<img alt="IMG" src={require('./images/img-01.png')}/>
-						</div>
+			<div>
+				<div className="login100-pic js-tilt">
+					<img alt="IMG" src={require('./images/img-01.png')}/>
+				</div>
 
-						<div className="login100-form">
-							<span className="login100-form-title">
-								Member Register
-							</span>
+				<div className="login100-form">
+					<span className="login100-form-title">
+						Member Register
+					</span>
 
-							<div className="wrap-input100">
-								<input className="input100" type="text" name="username" placeholder="Username" onChange={this.onUserNameChange}/>
-								<span className="focus-input100"></span>
-								<span className="symbol-input100">
-									<i className="fa fa-user-circle-o" aria-hidden="true"></i>
-								</span>
-							</div>
+					<div className="wrap-input100">
+						<input className="input100" type="text" name="username" placeholder="Username" onChange={this.onUserNameChange}/>
+						<span className="focus-input100"></span>
+						<span className="symbol-input100">
+							<i className="fa fa-user-circle-o" aria-hidden="true"></i>
+						</span>
+					</div>
 
-							<div className="wrap-input100">
-								<input className="input100" type="text" name="email" placeholder="Email" onChange={this.onEmailChange}/>
-								<span className="focus-input100"></span>
-								<span className="symbol-input100">
-									<i className="fa fa-envelope" aria-hidden="true"></i>
-								</span>
-							</div>
+					<div className="wrap-input100">
+						<input className="input100" type="text" name="email" placeholder="Email" onChange={this.onEmailChange}/>
+						<span className="focus-input100"></span>
+						<span className="symbol-input100">
+							<i className="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
 
-							<div className="wrap-input100">
-								<input className="input100" type="password" name="pass" placeholder="Password" onChange={this.onPasswordChange}/>
-								<span className="focus-input100"></span>
-								<span className="symbol-input100">
-									<i className="fa fa-lock" aria-hidden="true"></i>
-								</span>
-							</div>
-							
-							<div className="container-login100-form-btn">
-								<button className="login100-form-btn" onClick={() => this.onRegisterSubmit()}>
-									Register
-								</button>
-							</div>
+					<div className="wrap-input100">
+						<input className="input100" type="password" name="pass" placeholder="Password" onChange={this.onPasswordChange}/>
+						<span className="focus-input100"></span>
+						<span className="symbol-input100">
+							<i className="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div className="container-login100-form-btn">
+						<button className="login100-form-btn" onClick={() => this.onRegisterSubmit()}>
+							Register
+						</button>
+					</div>
 
-							<div className="text-center p-t-136">
-								<a className="txt2" onClick={() => onRouteChange('signin')}>
-									Sign in
-									<i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-								</a>
-							</div>
-						</div>
+					<div className="text-center p-t-136">
+						<a className="txt2" onClick={() => onRouteChange('signin')}>
+							Sign in
+							<i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
 					</div>
 				</div>
 			</div>

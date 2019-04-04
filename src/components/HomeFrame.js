@@ -1,12 +1,14 @@
 import React from 'react';
-import './HomeFrame.css';
+import './HomeFrame.scss';
 
 const HomeFrame = (props) => {
 	return (
-		<div className="homeframe wrap-login100">
-		{
-			props.children
-		}
+		<div className="homeframe">
+			<div className="wrap-login100">
+			{
+				props.children
+			}
+			</div>
 		</div>
 	)
 }

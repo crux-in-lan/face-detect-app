@@ -16,7 +16,7 @@ class App extends Component {
   constructor() {
     super();
     this.state ={
-      route: 'home',
+      route: 'signin',
       user: {     
         username: '',
         email: '',
@@ -46,19 +46,21 @@ class App extends Component {
             <LoginFrame>              
                 <SignIn onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>  
             </LoginFrame>
-            <Footer/>
+            <FooterFrame>
+                <Footer/>              
+            </FooterFrame>
           </PageFrame>
         );
       break;
       case 'home':
         return (
           <PageFrame>
-            <HomeFrame>
-              {
-              // <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
-              }
+            <HomeFrame>              
+              <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
             </HomeFrame>
-            <Footer/>
+            <FooterFrame>
+              <Footer/>
+            </FooterFrame>
           </PageFrame>
         );
       break;
@@ -68,7 +70,9 @@ class App extends Component {
             <RegisterFrame>
               <Register onRouteChange={this.onRouteChange}/>
             </RegisterFrame>
-            <Footer/>
+            <FooterFrame>
+              <Footer/>
+            </FooterFrame>
           </PageFrame>
         );
       break;
@@ -78,9 +82,12 @@ class App extends Component {
             <LoginFrame>
               <SignIn onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>
             </LoginFrame>
-            <Footer/>
+            <FooterFrame>
+              <Footer/>
+            </FooterFrame>
           </PageFrame>
         );
+        break;
     }    
   }
 }

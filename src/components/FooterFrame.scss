@@ -1,4 +1,4 @@
-.loginframe {
+.footerframe {
   .wrap-login100 {
     width: 960px;
     background: #fff;
@@ -12,25 +12,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 177px 130px 33px 95px;
+    padding: 17px 13px 33px 95px;
+    margin: 20px 0px 0px 0px;
   }
-
 
   @media (max-width: 992px) {
     .wrap-login100 {
-      padding: 177px 90px 33px 85px;
+      padding: 17px 9px 33px 85px;
+      margin: 20px 0px 0px 0px;
     }
   }
-
+  
   @media (max-width: 768px) {
     .wrap-login100 {
-      padding: 100px 80px 33px 80px;
+      padding: 10px 8px 33px 80px;
+      margin: 20px 0px 0px 0px;
     }
   }
 
   @media (max-width: 576px) {
     .wrap-login100 {
-      padding: 100px 15px 33px 15px;
+      padding: 10px 15px 33px 15px;
+      margin: 20px 0px 0px 0px;
     }
   }
 }

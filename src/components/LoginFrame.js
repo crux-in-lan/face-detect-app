@@ -3,10 +3,12 @@ import './LoginFrame.scss';
 
 const LoginFrame = (props) => {
 	return (
-		<div className="loginframe wrap-login100">
-		{
-			props.children
-		}
+		<div className='loginframe'>
+			<div className="wrap-login100">
+			{
+				props.children
+			}
+			</div>
 		</div>
 	)
 }
