@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
-import './App.css';
 import './css/util.css';
+import './App.css';
 import HomePage from './HomePage';
-import SignIn from './SignIn';
 import Register from './Register';
 import Footer from '../components/footer';
+import PageFrame from '../components/PageFrame';
+import LoginFrame from '../components/LoginFrame';
+import RegisterFrame from '../components/RegisterFrame';
+import FooterFrame from '../components/FooterFrame';
+import SignIn from './SignIn';
+import HomeFrame from '../components/HomeFrame';
 
 class App extends Component {
   constructor() {
     super();
     this.state ={
-      route: 'signin',
+      route: 'home',
       user: {     
         username: '',
         email: '',
@@ -37,34 +42,44 @@ class App extends Component {
     switch(route) {
       case 'signin':
         return (
-          <div>
-            <SignIn onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>
+          <PageFrame>
+            <LoginFrame>              
+                <SignIn onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>  
+            </LoginFrame>
             <Footer/>
-          </div>
+          </PageFrame>
         );
       break;
       case 'home':
         return (
-          <div>
-            <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
+          <PageFrame>
+            <HomeFrame>
+              {
+              // <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
+              }
+            </HomeFrame>
             <Footer/>
-          </div>
+          </PageFrame>
         );
       break;
       case 'register':
         return (
-          <div>
-            <Register onRouteChange={this.onRouteChange}/>
+          <PageFrame>
+            <RegisterFrame>
+              <Register onRouteChange={this.onRouteChange}/>
+            </RegisterFrame>
             <Footer/>
-          </div>
+          </PageFrame>
         );
       break;
       default:
         return (
-          <div>
-            <SignIn onRouteChange={this.onRouteChange}/>
+          <PageFrame>
+            <LoginFrame>
+              <SignIn onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>
+            </LoginFrame>
             <Footer/>
-          </div>
+          </PageFrame>
         );
     }    
   }

@@ -3,7 +3,7 @@ import FaceDetect from './faceDetect';
 import Rank from '../components/Rank';
 import SignOut from '../components/SignOut';
 import Logo from '../components/Logo';
-import './HomePage.css';
+// import './HomePage.css';
 // import './css/main.css';
 
 class HomePage extends Component {
