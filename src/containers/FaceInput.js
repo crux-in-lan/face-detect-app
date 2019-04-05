@@ -40,11 +40,26 @@ class FaceInput extends Component {
 	render() {
 		const {onUrlChange, par2} = this.props;
 		return (
+			// {			
+			// <div>
+			// 	<input type='text' id='imageURL' onChange={onUrlChange}/>
+			// 	<input type='button' value="Detect" onClick={() => this.onDetectSubmit()}/>
+			// </div>
+			// }
 			<div>
-				<div>
-				<input type='text' id='imageURL' onChange={onUrlChange}/>
-				<input type='button' value="Detect" onClick={() => this.onDetectSubmit()}/>
-			</div>
+				<div className="wrap-input100">
+					<input className="input100" type="text" name="email" id='imageURL' placeholder="Email" onChange={onUrlChange}/>
+					<span className="focus-input100"></span>
+					<span className="symbol-input100">
+						<i className="fa fa-envelope" aria-hidden="true"></i>
+					</span>
+				</div>
+
+				<div className="container-login100-form-btn">
+					<button className="login100-form-btn" onClick={() => this.onDetectSubmit()}>
+						Detect
+					</button>
+				</div>
 			</div>
 		)
 	}
