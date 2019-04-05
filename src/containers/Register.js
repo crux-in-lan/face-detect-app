@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import './css/Register.scss';
+import './css/Register.scss';
 
 class Register extends Component {
 	constructor(props) {
@@ -48,7 +48,7 @@ class Register extends Component {
 	render() {
 		const {onRouteChange} = this.props;
 		return (			
-			<div>
+			<div className='register'>
 				<div className="login100-pic js-tilt">
 					<img alt="IMG" src={require('./images/img-01.png')}/>
 				</div>

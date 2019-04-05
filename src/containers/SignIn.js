@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './fonts/font-awesome-4.7.0/css/font-awesome.min.css';
-// import './css/SignIn.css';
+import './css/SignIn.scss';
 
 class SignIn extends Component {
 	constructor(props) {
@@ -40,7 +40,7 @@ class SignIn extends Component {
 	render() {
 		const {onRouteChange} = this.props;
 		return (
-				<div>			 
+				<div className='signin'>			 
 					<div className="login100-pic js-tilt" data-tilt>
 						<img alt="IMG" src={require('./images/img-01.png')}/>
 					</div>

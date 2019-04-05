@@ -1,0 +1,53 @@
+import React, {Component} from 'react';
+
+class FaceInput extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			
+		}
+	}
+
+	onDetectSubmit = () => {
+		const Clarifai = require('clarifai');
+ 
+		const app = new Clarifai.App({
+		 apiKey: 'ab6c42866254412fbbec07825703e19e'
+		});
+		const imageURL = document.getElementById('imageURL');
+		app.models.predict("a403429f2ddf4b49b307e318f00e528b", imageURL.value)
+		.then(result => {
+			// console.log(result.outputs[0].data.regions[0].region_info.bounding_box);//_REM_
+			this.props.calculateBoundingBoxPositions(result.outputs[0].data.regions[0].region_info.bounding_box);
+			// console.log('Type of detections: ',this.props.detections);
+			fetch(`http://192.168.0.108:3001/detect/${this.props.userId}`,{
+				method:'put'
+			})
+			.then(response => response.json())
+			.then(result => {
+				if(result.data) {
+					this.props.updateUser({detections: result.data});
+				} else {
+					alert(result.err);
+				}
+			})
+			.catch(err => alert(err));
+			
+		})
+		.catch(err => alert(`Unable to get response from Clarifai. Error: ${err}`));
+	}
+
+	render() {
+		const {onUrlChange, par2} = this.props;
+		return (
+			<div>
+				<div>
+				<input type='text' id='imageURL' onChange={onUrlChange}/>
+				<input type='button' value="Detect" onClick={() => this.onDetectSubmit()}/>
+			</div>
+			</div>
+		)
+	}
+}
+
+export default FaceInput;
