@@ -42,7 +42,7 @@
   /*---------------------------------------------*/
   a {
   	font-family: Poppins-Regular;
-  	font-size: 14px;
+  	font-size: 0.8em;
   	line-height: 1.7;
   	color: #666666;
   	margin: 0px;
@@ -68,7 +68,7 @@
 
   p {
   	font-family: Poppins-Regular;
-  	font-size: 14px;
+  	font-size: 0.8em;
   	line-height: 1.7;
   	color: #666666;
   	margin: 0px;
@@ -136,7 +136,7 @@
 
   .txt2 {
     font-family: Poppins-Regular;
-    font-size: 13px;
+    font-size: 1.3em;
     line-height: 1.5;
   color: #666666;
   cursor: pointer;
@@ -161,14 +161,14 @@
 
 .login100-form-title {
   font-family: Poppins-Bold;
-  font-size: 24px;
+  font-size: 1.4em;
   color: #333333;
   line-height: 1.2;
   text-align: center;
 
   width: 100%;
   display: block;
-  padding-bottom: 54px;
+  padding-bottom: 1vh;
 }
 
 
@@ -182,10 +182,9 @@
 
 .input100 {
   font-family: Poppins-Medium;
-  font-size: 15px;
+  font-size: 0.8em;
   line-height: 1.5;
   color: #666666;
-
   display: block;
   width: 100%;
   background: #e6e6e6;
@@ -230,8 +229,7 @@
 }
 
 .symbol-input100 {
-  font-size: 15px;
-
+  font-size: 0.8em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -275,7 +273,7 @@
 
 .login100-form-btn {
   font-family: Montserrat-Bold;
-  font-size: 15px;
+  font-size: 0.8em;
   line-height: 1.5;
   color: #fff;
   text-transform: uppercase;
@@ -322,9 +320,9 @@
 }
 
 @media (max-width: 768px) {
-  .login100-pic {
-    display: none;
-  }
+  // .login100-pic {
+  //   display: none;
+  // }
 
   .login100-form {
     width: 100%;

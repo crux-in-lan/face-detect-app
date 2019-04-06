@@ -67,11 +67,8 @@ class HomePage extends Component {
 					// <FaceDetect updateUser={this.props.updateUser} userId={this.props.user.id}/>				
 
 				}
-				<div className="text-center p-t-136">
-					<a className="txt2">
+				<div className="text-center p-t-136">					
 						<SignOut onRouteChange={this.props.onRouteChange}/>
-						<i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-					</a>
 				</div>
 			</div>
 		</div>

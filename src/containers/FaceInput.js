@@ -48,10 +48,10 @@ class FaceInput extends Component {
 			// }
 			<div>
 				<div className="wrap-input100">
-					<input className="input100" type="text" name="email" id='imageURL' placeholder="Email" onChange={onUrlChange}/>
+					<input className="input100" type="text" name="imageURL" id='imageURL' placeholder="URL" onChange={onUrlChange}/>
 					<span className="focus-input100"></span>
 					<span className="symbol-input100">
-						<i className="fa fa-envelope" aria-hidden="true"></i>
+						<i className="fa fa-link" aria-hidden="true"></i>
 					</span>
 				</div>
 
