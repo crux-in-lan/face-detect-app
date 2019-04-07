@@ -1,0 +1,11 @@
+.register {
+	width: 500px;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+	text-align: left;
+	.column {
+		display: flex;
+		flex-direction: column;
+	}
+}
