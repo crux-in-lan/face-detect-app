@@ -1,4 +1,6 @@
+/*libraries and APIs*/
 import React, { Component } from 'react';
+
 /*common for the whole application*/
 import logo from './logo.svg';
 import './css/util.css';

@@ -50,7 +50,7 @@ class RegisterPage extends Component {
 		return (			
 			<div className='register'>
 				<div className="login100-pic js-tilt">
-					<img alt="IMG" src={require('./images/img-01.png')}/>
+					<img alt="IMG" src={require('./img/img-01.png')}/>
 				</div>
 
 				<div className="login100-form">
