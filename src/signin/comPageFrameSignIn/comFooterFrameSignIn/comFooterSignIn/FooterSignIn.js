@@ -16,7 +16,7 @@ const FooterSignIn = (props) => {
 				<h4>gitHub Repo:</h4>
 				<a href='https://github.com/crux-in-lan/face-detect-app'>Front End</a>
 				<a href='https://github.com/crux-in-lan/face-detect-app-api'>Back End</a>
-				<a href=''>Database</a>
+				<a href='https://github.com/crux-in-lan/face-detect-app-db'>Database</a>
 			</div>
 		</div>
 	)
