@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import './font/font-awesome-4.7.0/css/font-awesome.min.css';
+import './font/font-awesome-4.7.0/css/font-awesome.min.css';
 import './css/SignInPage.scss';
 
 class SignInPage extends Component {

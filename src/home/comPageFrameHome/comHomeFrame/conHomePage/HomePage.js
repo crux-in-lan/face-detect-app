@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-// import FaceDetect from './faceDetect';
+import './font/font-awesome-4.7.0/css/font-awesome.min.css';
 import Rank from './comRank/Rank';
 import SignOut from './comSignOut/SignOut';
-// import Logo from '../components/Logo';
 import './css/HomePage.scss';
-// import './css/main.css';
 import FaceImage from './comFaceImage/FaceImage';
 import FaceInput from './comFaceInput/FaceInput';
 
