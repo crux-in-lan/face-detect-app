@@ -4,7 +4,7 @@ import './css/FooterRegister.scss';
 
 const FooterRegister = (props) => {
 	return (
-		<div className='register'>
+		<div className='footerregister'>
 			<div className='column'>
 				<h4>Contact:</h4> 
 				<ToolTip comment={'nicksona.in.lan@gmail.com'}>

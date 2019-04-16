@@ -42,15 +42,7 @@ class HomePage extends Component {
 	}
 
 	render() {
-		return (
-			// {
-	  //     <div className="grid-container">	             
-	  //           <div className="logo"><Logo/></div>	         	 
-	  //           <div className="rank"><Rank username={this.props.user.username} detections={this.props.user.detections}/></div>
-	  //           <div className="signout"><SignOut onRouteChange={this.props.onRouteChange}/></div>
-	  //           <div className="faceDetect"><FaceDetect updateUser={this.props.updateUser} detections={this.props.user.detections} userId={this.props.user.id}/></div>
-	  //     </div>
-	  // 		}
+		return (		
 	  <div className='homepage'>
 			<div className="login100-pic js-tilt">
 				<FaceImage imageURL={this.state.imageURL} boundingBox={this.state.boundingBox}/>
@@ -60,11 +52,7 @@ class HomePage extends Component {
 				<span className="login100-form-title">
 					<Rank username={this.props.user.username} detections={this.props.user.detections}/>
 					<FaceInput onUrlChange={this.onUrlChange} updateUser={this.props.updateUser} userId={this.props.user.id} calculateBoundingBoxPositions={this.calculateBoundingBoxPositions}/>
-				</span>	
-				{			
-					// <FaceDetect updateUser={this.props.updateUser} userId={this.props.user.id}/>				
-
-				}
+				</span>				
 				<div className="text-center p-t-136">					
 						<SignOut onRouteChange={this.props.onRouteChange}/>
 				</div>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './css/FaceInput.scss';
 class FaceInput extends Component {
 	constructor(props) {
 		super(props);
@@ -40,13 +40,7 @@ class FaceInput extends Component {
 	render() {
 		const {onUrlChange, par2} = this.props;
 		return (
-			// {			
-			// <div>
-			// 	<input type='text' id='imageURL' onChange={onUrlChange}/>
-			// 	<input type='button' value="Detect" onClick={() => this.onDetectSubmit()}/>
-			// </div>
-			// }
-			<div>
+			<div className='faceinput'>
 				<div className="wrap-input100">
 					<input className="input100" type="text" name="imageURL" id='imageURL' placeholder="URL" onChange={onUrlChange}/>
 					<span className="focus-input100"></span>

@@ -1,17 +1,13 @@
 import React from 'react';
-import '../css/PageFrameRegister.scss';
+import './css/PageFrameRegister.scss';
 
 const PageFrameRegister = (props) => {
 	return (
-		<div className="pageframe">
-			<div className="limiter">
-				<div className="container-login100">
+		<div className="pageframeRegister">			
 				{
 					props.children
 				}
-				</div>
-			</div>
-		</div>
+		</div>			
 	)
 }
 

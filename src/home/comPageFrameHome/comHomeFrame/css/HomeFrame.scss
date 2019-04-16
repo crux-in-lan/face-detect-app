@@ -1,33 +1,18 @@
-  .homeframe.wrap-login100 {
-    width: 65%;
+.homeframe {
+    margin: 2.08% 4.16% 2.08% 4.16%;
     background: #fff;
-    border-radius: 4em;
+    border-radius: 1em;
+    // box-sizing: border-box;    
+    padding: 8.33%;  
     overflow: hidden;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 5vh;
-    padding: 10% 7% 3% 7%;
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    padding: 4.16%;
   }
 
-  @media (max-width: 992px) {
-    .homeframe.wrap-login100 {
-      padding: 10% 7% 3% 7%;
-    }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    padding: 2.08%;
   }
-  
-  @media (max-width: 768px) {
-    .homeframe.wrap-login100 {
-      padding: 10% 7% 3% 7%;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .homeframe.wrap-login100 {
-      padding: 10% 7% 3% 7%;
-    }
-  }
+ }

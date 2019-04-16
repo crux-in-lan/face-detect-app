@@ -3,7 +3,7 @@ import './css/HomeFrame.scss';
 
 const HomeFrame = (props) => {
 	return (
-			<div className="homeframe wrap-login100">
+			<div className="homeframe">
 			{
 				props.children
 			}

@@ -64,48 +64,57 @@ class App extends Component {
             </SignInFrame>            
             
             <FooterFrameSignIn>              
-                <FooterSignIn/>                            
+              <FooterSignIn/>                            
             </FooterFrameSignIn>
             
           </PageFrameSignIn>
         );
       break;
-      // case 'home':
-      //   return (
-      //     <PageFrameHome>
-      //       <HomeFrame>              
-      //         <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
-      //       </HomeFrame>
-      //       <FooterFrameHome>
-      //         <FooterHome/>
-      //       </FooterFrameHome>
-      //     </PageFrameHome>
-      //   );
-      // break;
-      // case 'register':
-      //   return (
-      //     <PageFrameRegister>
-      //       <RegisterFrame>
-      //         <RegisterPage onRouteChange={this.onRouteChange}/>
-      //       </RegisterFrame>
-      //       <FooterFrameRegister>
-      //         <FooterRegister/>
-      //       </FooterFrameRegister>
-      //     </PageFrameRegister>
-      //   );
-      // break;
-      // default:
-      //   return (
-      //     <PageFrameSignIn>
-      //       <SignInFrame>              
-      //           <SignInPage onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>  
-      //       </SignInFrame>
-      //       <FooterFrameSignIn>
-      //           <FooterSignIn/>              
-      //       </FooterFrameSignIn>
-      //     </PageFrameSignIn>
-      //   );
-      //   break;
+      case 'home':
+        return (
+          <PageFrameHome>
+            
+            <HomeFrame>              
+              <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
+            </HomeFrame>
+            
+            <FooterFrameHome>
+              <FooterHome/>
+            </FooterFrameHome>
+            
+          </PageFrameHome>
+        );
+      break;
+      case 'register':
+        return (
+          <PageFrameRegister>
+
+            <RegisterFrame>              
+              <RegisterPage onRouteChange={this.onRouteChange}/>              
+            </RegisterFrame>
+            
+            <FooterFrameRegister>
+              <FooterRegister/>
+            </FooterFrameRegister>
+            
+          </PageFrameRegister>
+        );
+      break;
+      default:
+        return (
+          <PageFrameSignIn>
+
+            <SignInFrame>              
+              <SignInPage onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>  
+            </SignInFrame>
+
+            <FooterFrameSignIn>
+              <FooterSignIn/>              
+            </FooterFrameSignIn>
+
+          </PageFrameSignIn>
+        );
+        break;
     }    
   }
 }

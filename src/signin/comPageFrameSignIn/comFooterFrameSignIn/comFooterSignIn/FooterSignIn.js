@@ -4,7 +4,7 @@ import './css/FooterSignIn.scss';
 
 const FooterSignIn = (props) => {
 	return (
-		<div className='register'>
+		<div className='footersignin'>
 			<div className='column'>
 				<h4>Contact:</h4> 
 				<ToolTip comment={'nicksona.in.lan@gmail.com'}>

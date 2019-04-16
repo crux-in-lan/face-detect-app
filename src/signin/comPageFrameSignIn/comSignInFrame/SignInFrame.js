@@ -3,7 +3,7 @@ import './css/SignInFrame.scss';
 
 const SignInFrame = (props) => {
 	return (		
-		<div className='loginframe'>			
+		<div className='signinframe'>			
 			{
 				props.children
 			}

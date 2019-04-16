@@ -1,35 +1,18 @@
 .registerframe {
-  .wrap-login100 {
-    width: 960px;
+    margin: 2.08% 4.16% 2.08% 4.16%;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 1em;
+    // box-sizing: border-box;    
+    padding: 8.33%;  
     overflow: hidden;
 
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-    padding: 177px 130px 33px 95px;
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    padding: 4.16%;
   }
 
-  @media (max-width: 992px) {
-    .wrap-login100 {
-      padding: 177px 90px 33px 85px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .wrap-login100 {
-      padding: 100px 80px 33px 80px;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .wrap-login100 {
-      padding: 100px 15px 33px 15px;
-    }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    padding: 2.08%;
   }
 }

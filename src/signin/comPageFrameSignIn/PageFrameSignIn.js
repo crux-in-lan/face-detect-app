@@ -3,7 +3,7 @@ import './css/PageFrameSignIn.scss';
 
 const PageFrameSinIn = (props) => {
 	return (
-		<div className="pageframe">			
+		<div className="pageframeSignIn">			
 			{
 				props.children
 			}			

@@ -1,18 +1,14 @@
 import React from 'react';
 import './css/PageFrameHome.scss';
 
-const PageFrame = (props) => {
+const PageFrameHome = (props) => {
 	return (
-		<div className="pageframe">
-			<div className="limiter">
-				<div className="container-login100">
-				{
-					props.children
-				}
-				</div>
-			</div>
+		<div className="pageframehome">
+			{
+				props.children
+			}
 		</div>
 	)
 }
 
-export default PageFrame;
+export default PageFrameHome;

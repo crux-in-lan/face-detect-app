@@ -2,12 +2,10 @@ import React from 'react';
 import './css/FooterFrameRegister.scss';
 const FooterFrameRegister = (props) => {
 	return (
-		<div className="footerframe">
-			<div className="wrap-login100">
+		<div className="footerframeregister">
 			{
 				props.children
-			}
-			</div>
+			}			
 		</div>
 	)
 }
