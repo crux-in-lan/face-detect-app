@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './css/FaceImage.scss';
 class FaceImage extends Component {
 	constructor(props) {
 		super(props);
