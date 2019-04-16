@@ -1,14 +1,16 @@
 {
-  "main.css": "/webapps/face-detect-app/static/css/main.6cd02f16.chunk.css",
-  "main.js": "/webapps/face-detect-app/static/js/main.1307a8de.chunk.js",
-  "main.js.map": "/webapps/face-detect-app/static/js/main.1307a8de.chunk.js.map",
+  "main.css": "/webapps/face-detect-app/static/css/main.51fc000f.chunk.css",
+  "main.js": "/webapps/face-detect-app/static/js/main.af21ae8f.chunk.js",
+  "main.js.map": "/webapps/face-detect-app/static/js/main.af21ae8f.chunk.js.map",
   "runtime~main.js": "/webapps/face-detect-app/static/js/runtime~main.faf43074.js",
   "runtime~main.js.map": "/webapps/face-detect-app/static/js/runtime~main.faf43074.js.map",
-  "static/js/2.b7069d97.chunk.js": "/webapps/face-detect-app/static/js/2.b7069d97.chunk.js",
-  "static/js/2.b7069d97.chunk.js.map": "/webapps/face-detect-app/static/js/2.b7069d97.chunk.js.map",
+  "static/js/2.2536886c.chunk.js": "/webapps/face-detect-app/static/js/2.2536886c.chunk.js",
+  "static/js/2.2536886c.chunk.js.map": "/webapps/face-detect-app/static/js/2.2536886c.chunk.js.map",
   "index.html": "/webapps/face-detect-app/index.html",
-  "precache-manifest.44c9466723d5a89e78b445dee392c987.js": "/webapps/face-detect-app/precache-manifest.44c9466723d5a89e78b445dee392c987.js",
+  "precache-manifest.eddda129ce87799c5076a6c7a74d0639.js": "/webapps/face-detect-app/precache-manifest.eddda129ce87799c5076a6c7a74d0639.js",
   "service-worker.js": "/webapps/face-detect-app/service-worker.js",
-  "static/css/main.6cd02f16.chunk.css.map": "/webapps/face-detect-app/static/css/main.6cd02f16.chunk.css.map",
+  "static/css/main.51fc000f.chunk.css.map": "/webapps/face-detect-app/static/css/main.51fc000f.chunk.css.map",
+  "static/media/SignIn.scss": "/webapps/face-detect-app/static/media/Poppins-Regular.731a28a4.ttf",
+  "static/media/font-awesome.min.css": "/webapps/face-detect-app/static/media/fontawesome-webfont.fee66e71.woff",
   "static/media/logo.svg": "/webapps/face-detect-app/static/media/logo.5d5d9eef.svg"
 }
