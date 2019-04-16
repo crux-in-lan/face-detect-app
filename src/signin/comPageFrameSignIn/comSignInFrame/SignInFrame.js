@@ -2,14 +2,12 @@ import React from 'react';
 import './css/SignInFrame.scss';
 
 const SignInFrame = (props) => {
-	return (
-		<div className='loginframe'>
-			<div className="wrap-login100">
+	return (		
+		<div className='loginframe'>			
 			{
 				props.children
 			}
-			</div>
-		</div>
+		</div>		
 	)
 }
 

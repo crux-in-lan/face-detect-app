@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 /*common for the whole application*/
 import logo from './logo.svg';
-import './css/util.css';
+// import './css/util.css';
 import './App.css';
 
 /*homepage*/
@@ -58,51 +58,54 @@ class App extends Component {
       case 'signin':
         return (
           <PageFrameSignIn>
-            <SignInFrame>              
-                <SignInPage onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>  
-            </SignInFrame>
-            <FooterFrameSignIn>
-                <FooterSignIn/>              
+             
+            <SignInFrame> 
+              <SignInPage onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>                           
+            </SignInFrame>            
+            
+            <FooterFrameSignIn>              
+                <FooterSignIn/>                            
             </FooterFrameSignIn>
+            
           </PageFrameSignIn>
         );
       break;
-      case 'home':
-        return (
-          <PageFrameHome>
-            <HomeFrame>              
-              <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
-            </HomeFrame>
-            <FooterFrameHome>
-              <FooterHome/>
-            </FooterFrameHome>
-          </PageFrameHome>
-        );
-      break;
-      case 'register':
-        return (
-          <PageFrameRegister>
-            <RegisterFrame>
-              <RegisterPage onRouteChange={this.onRouteChange}/>
-            </RegisterFrame>
-            <FooterFrameRegister>
-              <FooterRegister/>
-            </FooterFrameRegister>
-          </PageFrameRegister>
-        );
-      break;
-      default:
-        return (
-          <PageFrameSignIn>
-            <SignInFrame>              
-                <SignInPage onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>  
-            </SignInFrame>
-            <FooterFrameSignIn>
-                <FooterSignIn/>              
-            </FooterFrameSignIn>
-          </PageFrameSignIn>
-        );
-        break;
+      // case 'home':
+      //   return (
+      //     <PageFrameHome>
+      //       <HomeFrame>              
+      //         <HomePage onRouteChange={this.onRouteChange} user={this.state.user} updateUser={this.updateUser}/>
+      //       </HomeFrame>
+      //       <FooterFrameHome>
+      //         <FooterHome/>
+      //       </FooterFrameHome>
+      //     </PageFrameHome>
+      //   );
+      // break;
+      // case 'register':
+      //   return (
+      //     <PageFrameRegister>
+      //       <RegisterFrame>
+      //         <RegisterPage onRouteChange={this.onRouteChange}/>
+      //       </RegisterFrame>
+      //       <FooterFrameRegister>
+      //         <FooterRegister/>
+      //       </FooterFrameRegister>
+      //     </PageFrameRegister>
+      //   );
+      // break;
+      // default:
+      //   return (
+      //     <PageFrameSignIn>
+      //       <SignInFrame>              
+      //           <SignInPage onRouteChange={this.onRouteChange} updateUser={this.updateUser}/>  
+      //       </SignInFrame>
+      //       <FooterFrameSignIn>
+      //           <FooterSignIn/>              
+      //       </FooterFrameSignIn>
+      //     </PageFrameSignIn>
+      //   );
+      //   break;
     }    
   }
 }
