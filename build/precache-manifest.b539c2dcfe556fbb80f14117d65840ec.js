@@ -4,24 +4,24 @@ self.__precacheManifest = [
     "url": "/webapps/face-detect-app/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
-    "revision": "8ec783fb59dbd0fdf50c",
-    "url": "/webapps/face-detect-app/static/css/main.54a25e8a.chunk.css"
+    "revision": "d8568f2772be1ca44b5e",
+    "url": "/webapps/face-detect-app/static/css/main.e586b47b.chunk.css"
   },
   {
     "revision": "fc32777b04de4b8cd7c7",
     "url": "/webapps/face-detect-app/static/js/runtime~main.faf43074.js"
   },
   {
-    "revision": "355057a44338eccdd7c6",
-    "url": "/webapps/face-detect-app/static/js/2.37d90546.chunk.js"
+    "revision": "a9101464ab1bd975c637",
+    "url": "/webapps/face-detect-app/static/js/2.f797bf05.chunk.js"
   },
   {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
     "url": "/webapps/face-detect-app/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "8ec783fb59dbd0fdf50c",
-    "url": "/webapps/face-detect-app/static/js/main.3ac85bba.chunk.js"
+    "revision": "d8568f2772be1ca44b5e",
+    "url": "/webapps/face-detect-app/static/js/main.81cad02f.chunk.js"
   },
   {
     "revision": "af7ae505a9eed503f8b8e6982036873e",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/webapps/face-detect-app/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "feb84efe4a91974a7ad2426258cf3d32",
+    "revision": "506276e68f144bfdf6420fab7111b1e4",
     "url": "/webapps/face-detect-app/index.html"
   }
 ];

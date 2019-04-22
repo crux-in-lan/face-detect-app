@@ -20,7 +20,7 @@ class FaceInput extends Component {
 			// console.log(result.outputs[0].data.regions[0].region_info.bounding_box);//_REM_
 			this.props.calculateBoundingBoxPositions(result.outputs[0].data.regions[0].region_info.bounding_box);
 			// console.log('Type of detections: ',this.props.detections);
-			fetch(`http://192.168.0.108:3001/detect/${this.props.userId}`,{
+			fetch(`http://93.123.94.2:3001/detect/${this.props.userId}`,{
 				method:'put'
 			})
 			.then(response => response.json())
