@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/webapps/face-detect-app/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
-    "revision": "d8568f2772be1ca44b5e",
+    "revision": "4193b9971edf264ff726",
     "url": "/webapps/face-detect-app/static/css/main.e586b47b.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/webapps/face-detect-app/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "d8568f2772be1ca44b5e",
-    "url": "/webapps/face-detect-app/static/js/main.81cad02f.chunk.js"
+    "revision": "4193b9971edf264ff726",
+    "url": "/webapps/face-detect-app/static/js/main.ccbb2b08.chunk.js"
   },
   {
     "revision": "af7ae505a9eed503f8b8e6982036873e",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/webapps/face-detect-app/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "506276e68f144bfdf6420fab7111b1e4",
+    "revision": "8ab7a0a83cf25b7098aa03f11f55b04b",
     "url": "/webapps/face-detect-app/index.html"
   }
 ];
