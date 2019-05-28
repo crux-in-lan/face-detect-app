@@ -31,7 +31,7 @@ class App extends Component {
   constructor() {
     super();
     this.state ={
-      route: 'singin',
+      route: 'signin',
       user: {     
         username: '',
         email: '',

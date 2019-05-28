@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
+import BoundingBoxList from './BoundingBoxList/BoundingBoxList';
 import './css/FaceImage.scss';
+
 class FaceImage extends Component {
 	constructor(props) {
 		super(props);
 	}
 	render() {
-		const {imageURL,boundingBox} = this.props;
+		const {imageURL,boundingBoxes} = this.props;
 		return (
 			<div className='imgContainer'>
 				<img id='imgFace' alt='face' src={imageURL}/>
-				<div className='boundingBox' style={boundingBox}></div>
+				<BoundingBoxList boundingBoxes = {boundingBoxes}/>
 			</div>
 		)
 	}

@@ -1,0 +1,10 @@
+.boundingBox {
+	position: absolute; 
+	display:none;
+}
+
+.boundingBox.active {
+	position: absolute; 
+	display:block;
+	border: 4px solid blue;
+}

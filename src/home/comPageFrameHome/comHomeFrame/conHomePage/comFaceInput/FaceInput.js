@@ -18,7 +18,8 @@ class FaceInput extends Component {
 		app.models.predict("a403429f2ddf4b49b307e318f00e528b", imageURL.value)
 		.then(result => {
 			// console.log(result.outputs[0].data.regions[0].region_info.bounding_box);//_REM_
-			this.props.calculateBoundingBoxPositions(result.outputs[0].data.regions[0].region_info.bounding_box);
+			// console.log(result.outputs[0].data.regions);
+			this.props.calculateBoundingBoxPositions(result.outputs[0].data.regions);
 			// console.log('Type of detections: ',this.props.detections);
 			fetch(`http://93.123.94.2:3001/detect/${this.props.userId}`,{
 				method:'put'

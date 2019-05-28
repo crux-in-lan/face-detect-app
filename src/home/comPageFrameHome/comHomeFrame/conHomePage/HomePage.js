@@ -11,12 +11,7 @@ class HomePage extends Component {
 		super(props)
 		this.state = {
 			imageURL: 'http://nebivalici.com/img_tmp/img-01.png',
-			boundingBox : {
-				top: undefined,
-				right: undefined,
-				bottom: undefined,
-				left: undefined
-			}
+			boundingBoxes : []
 		}
 	}
 
@@ -25,27 +20,33 @@ class HomePage extends Component {
 	}
 
 	calculateBoundingBoxPositions = (objPositions) => {
-		const image = document.getElementById('imgFace');
-		const width = image.width;
-		const height = image.height;
-		const {bottom_row, left_col, top_row, right_col} = objPositions;
-		const bottom = height * (1 - bottom_row); //bottom_row
-		const left = width * left_col; //left_col
-		const top = height * top_row; //top_row
-		const right = width * (1 - right_col); //right_col
+		// console.log(objPositions);
+		objPositions.forEach(region => {
+			const image = document.getElementById('imgFace');
+			const width = image.width;
+			const height = image.height;
+			const {bottom_row, left_col, top_row, right_col} = region.region_info.bounding_box;
+			const bottom = height * (1 - bottom_row); //bottom_row
+			const left = width * left_col; //left_col
+			const top = height * top_row; //top_row
+			const right = width * (1 - right_col); //right_col
 
-		this.setState({boundingBox: {top,right,bottom,left}},() => {
-			const bBox = document.getElementsByClassName("boundingBox")[0];
-  			bBox.classList.add("active");
-			// console.log(this.state.boundingBox);
+			this.setState((prevState) => {
+				boundingBoxes: prevState.boundingBoxes.push({
+					key: prevState.boundingBoxes.length ? prevState.boundingBoxes[prevState.boundingBoxes.length-1].key + 1 : 0,
+					style: {top,right,bottom,left},
+					active: 'active'
+				});
+			});				
 		});
 	}
 
 	render() {
+		// console.log(this.state.boundingBoxes);
 		return (		
 	  <div className='homepage'>
 			<div className="login100-pic js-tilt">
-				<FaceImage imageURL={this.state.imageURL} boundingBox={this.state.boundingBox}/>
+				<FaceImage imageURL={this.state.imageURL} boundingBoxes={this.state.boundingBoxes}/>
 			</div>
 
 			<div className="login100-form">
